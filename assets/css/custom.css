@@ -1,10 +1,4 @@
-p {
-  font-family: "Times New Roman", Times, serif;
-  color: #f59e9e;
-  font-style: italic;
-  margin: 2px;
-  padding: 2px;
-}
+
 a {
   font-family: "Times New Roman", Times, serif;
   color: #f59e9e;
@@ -16,30 +10,20 @@ a {
   font-family: "Times New Roman", Times, serif;
   color: #f59e9e;
   font-style: italic;
-  margin: 1px;
-  padding: 1px;
   border-color: #2502c0;
-  border-width: 20px;
+  border-width: 3px;
 }
 :active {
   font-family: "Times New Roman", Times, serif;
   color: #f59e9e;
   font-style: italic;
-  margin: 1px;
-  padding: 1px;
   border-color: #2502c0;
 }
 body {
   font-family: "Times New Roman", Times, serif;
-  color: #f59e9e;
   font-style: italic;
-  margin: 2px;
-  padding: 5px;
-  border-color: #2502c0;
-  border-radius: 20px;
-  border-width: 20px;
+  margin: 30px;
 }
-
 
 h1,
 h2,
@@ -47,19 +31,58 @@ h3,
 h4,
 h5,
 h6 {
-  color: #3a7934;
+  color: #3700ff;
   font-family: "Times New Roman", Times, serif;
   font-style: oblique;
 }
 
-.header {
-    color: #2502c0;
+h1 {
+  background-color: rgb(163, 163, 163);
+  border: 1px solid #1100ff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  color: #333;
+  border-bottom: 2px solid #0400ff;
+  padding-bottom: 10px;
 }
 
-.page-title-1 {
+.kategorija {
+  background-color: rgb(163, 163, 163);
+  border: 1px solid #1100ff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+}
+
+.kategorija h2 {
+  text-align: center;
+  color: #333;
+  border-bottom: 2px solid #0400ff;
+  padding-bottom: 10px;
+}
+
+.title_num_1 {
   color: #2502c0;
   background-color: #a894ff;
   position: absolute;
 }
 
+.kortele {
+  background-color: rgb(88, 88, 88);
+  border: 1px solid #2502c0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
 
+.kortele h3 {
+  margin-top: 0;
+  color: #2502c0;
+}
+
+.kortele p {
+  margin: 5px 0;
+  font-size: 14px;
+}
