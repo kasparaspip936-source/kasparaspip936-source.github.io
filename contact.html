@@ -125,36 +125,106 @@
 
           <div class="col-lg-7">
             <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-              <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <h3>Forma</h3>
+              
 
               <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
                 <div class="row gy-4">
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <input type="text" name="name" id="UserName" placeholder="Vardas" required="">
                   </div>
 
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <div class="col-md-6">
+                    <input type="text" name="nameS" id="UserNameS" placeholder="Pavardė" required="">
+                  </div>
+
+                  <div class="col-md-12 ">
+                    <input type="email" id="UserEmail" name="email" placeholder="El. paštas" required="">
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    <input type="text" id="UserTelNr" name="telnr" placeholder="Telefono numeris" required="">
                   </div>
 
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <input type="text" id="UserAdr" name="Adr" rows="6" placeholder="Adresas" required=""></input>
+                  </div>
+
+
+                  <div class="question-card">
+                    <h2>Kokie du komponentai dažniausiai naudojami elektros variklyje?</h2>
+
+                    <div class="answers">
+                     <label>
+                      <input type="checkbox" name="q1" value="Rotorius">
+                         Rotorius
+                     </label>
+
+                      <label>
+                       <input type="checkbox" name="q1" value="Statorius">
+                         Statorius
+                      </label>
+
+                      <label>
+                        <input type="checkbox" name="q1" value="Karbiuratorius">
+                          Karbiuratorius
+                      </label>
+                   </div>
+
+                  </div>
+
+                  <div class="question-card">
+                    <h2>Kurios dvi medžiagos dažnai naudojamos pastatų konstrukcijoms?</h2>
+
+                    <div class="answers">
+                     <label>
+                      <input type="checkbox" name="q2" value="Gelžbetonis">
+                         Gelžbetonis
+                     </label>
+
+                      <label>
+                       <input type="checkbox" name="q2" value="Popierius">
+                         Popierius
+                      </label>
+
+                      <label>
+                        <input type="checkbox" name="q2" value="Plienas">
+                          Plienas
+                      </label>
+                   </div>
+
+                  </div>
+
+                  <div class="question-card">
+                    <h2>Kurie du komponentai gali būti naudojami elektros grandinės energijai kaupti?</h2>
+
+                    <div class="answers">
+                     <label>
+                      <input type="checkbox" name="q3" value="Jungiklis">
+                         Jungiklis
+                     </label>
+
+                      <label>
+                       <input type="checkbox" name="q3" value="Kondensatorius">
+                         Kondensatorius
+                      </label>
+
+                      <label>
+                        <input type="checkbox" name="q3" value="Akumuliatorius">
+                          Akumuliatorius
+                      </label>
+                   </div>
+
                   </div>
 
                   <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="button" onclick="checkAnswer()">
+                     Siųsti
+                   </button>
                   </div>
-
+                  
+                  <h2 id="finalScore"></h2>
                 </div>
               </form>
 
@@ -212,6 +282,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

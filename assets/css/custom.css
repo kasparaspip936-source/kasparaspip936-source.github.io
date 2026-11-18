@@ -94,3 +94,73 @@ h1 {
   margin: 5px 0;
   font-size: 14px;
 }
+
+.question-card {
+    width: 350px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 50px auto;
+    border-width: 20px;
+    border-color:#2502c0;
+    margin-bottom: 10px;
+}
+
+.question-card h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.answers button {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: rgb(88, 88, 88);
+    cursor: pointer;
+    font-size: 16px;
+    border-color: #2502c0;
+}
+
+.answers button:hover {
+    background: #e8f0ff;
+    border-color: #2502c0;
+}
+
+.answers label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border: 2px solid #2502c0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.answers label:has(input:checked) {
+    border-color: #2502c0;
+    background: #646464;
+}
+
+.answers input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+button {
+    padding: 12px 25px;
+    background: #0c52c2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
