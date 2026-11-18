@@ -31,7 +31,6 @@ function checkAnswer() {
 
         const correct = correctAnswers[question];
 
-        // Tikriname, ar pasirinkti tiksliai abu teisingi atsakymai
         const isCorrect =
             selected.length === 2 &&
             correct.every(answer => selected.includes(answer));
@@ -46,7 +45,31 @@ function checkAnswer() {
         }
     }
 
+    const participant = {
+        name: name,
+        nameS: nameS,
+        email: email,
+        telnr: telnr,
+        adr: adr,
+        score: totalScore,
+        date: new Date().toLocaleString()
+    };
+
+    let participants = JSON.parse(
+        localStorage.getItem("participants") || "[]"
+    );
+
+    participants.push(participant);
+
+    localStorage.setItem(
+        "participants",
+        JSON.stringify(participants)
+    );
+
     document.getElementById("finalScore").textContent =
-        "Tavo rezultatas: " + totalScore + " / 30 taškų!";
+        name + ", tavo rezultatas: " + totalScore + " / 30 taškų!";
+
+    console.log("Išsaugoti dalyviai:", participants);
 }
+
 
