@@ -174,3 +174,139 @@ button {
     border-radius: 8px;
     cursor: pointer;
 }
+
+body.services-page.aurora-page {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    background: #080b20 !important;
+    overflow-x: hidden;
+}
+
+body.services-page.aurora-page::before {
+    content: "";
+    position: fixed;
+    inset: -50%;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 30% 40%,
+            rgba(0, 255, 200, 0.30),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 70% 30%,
+            rgba(80, 80, 255, 0.35),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 50% 70%,
+            rgba(180, 40, 255, 0.30),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 80% 80%,
+            rgba(0, 180, 255, 0.25),
+            transparent 50%
+        );
+
+    filter: blur(75px);
+    animation: auroraMove 16s ease-in-out infinite alternate;
+}
+
+@keyframes auroraMove {
+    0% {
+        transform: translate(-5%, -5%) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translate(5%, 3%) rotate(15deg) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-3%, 6%) rotate(-15deg) scale(1.2);
+    }
+}
+
+body.services-page.aurora-page .main,
+body.services-page.aurora-page #footer {
+    position: relative;
+    z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.services-page.aurora-page::before {
+        animation: none;
+    }
+}
+
+.animated-shapes {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.animated-shapes .shape {
+    position: absolute;
+}
+
+.animated-shapes .triangle {
+    width: 0;
+    height: 0;
+
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 80px solid rgba(0, 255, 220, 0.7);
+
+    top: 20%;
+    left: 12%;
+
+    filter: drop-shadow(0 0 15px #00ffdc);
+
+    animation: rotateTriangle 8s linear infinite;
+}
+
+.animated-shapes .circle {
+    width: 90px;
+    height: 90px;
+
+    border: 3px solid #b64dff;
+    border-radius: 50%;
+
+    top: 60%;
+    right: 15%;
+
+    box-shadow:
+        0 0 15px #b64dff,
+        inset 0 0 15px #b64dff;
+
+    animation: pulseCircle 4s ease-in-out infinite;
+}
+
+@keyframes rotateTriangle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseCircle {
+    0%, 100% {
+        transform: scale(0.6);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
