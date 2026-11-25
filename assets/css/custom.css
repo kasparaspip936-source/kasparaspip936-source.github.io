@@ -310,3 +310,66 @@ body.services-page.aurora-page #footer {
         opacity: 1;
     }
 }
+
+.skill-group {
+    margin-bottom: 45px;
+}
+
+.skill-group h2 {
+    color: #00dcca;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(0, 220, 202, 0.4);
+    padding-bottom: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: rgba(20, 25, 50, 0.85);
+    border: 1px solid rgba(0, 255, 220, 0.4);
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+
+    box-shadow: 0 0 15px rgba(0, 255, 220, 0.1);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 255, 220, 0.35);
+}
+
+.skill-card h3 {
+    color: #00ffdc;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #30364f;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #00ffdc,
+        #8b5cf6
+    );
+    border-radius: 10px;
+    transition: width 1s ease;
+}
